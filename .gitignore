@@ -1,0 +1,34 @@
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Eclipse project files
+.classpath
+.project
+
+# AndroidAnnotations related files
+.settings
+.factorypath
+.apt_generated
+
+# Maven related
+target/
+
+# Misc.
+*.DS_Store
+
+# Checkstyle
+.checkstyle

@@ -53,6 +53,12 @@ public class ParentFragment extends Fragment {
 	    args.putInt(TextViewFragment.POSITION_KEY, position);
 	    return TextViewFragment.newInstance(args);
 	}
+
+	@Override
+	public CharSequence getPageTitle(int position) {
+	    return "Fragment # " + position;
+	}
+
     }
 
 }

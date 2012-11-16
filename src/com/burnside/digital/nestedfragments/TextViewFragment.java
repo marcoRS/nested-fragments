@@ -37,7 +37,7 @@ public class TextViewFragment extends Fragment {
 	final int position = getArguments().getInt(POSITION_KEY);
 
 	TextView textview = (TextView) view.findViewById(R.id.textViewPosition);
-	textview.setText("Position number: " + position);
+	textview.setText(Integer.toString(position));
 	textview.setOnClickListener(new OnClickListener() {
 
 	    @Override

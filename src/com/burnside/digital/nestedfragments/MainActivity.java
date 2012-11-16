@@ -30,6 +30,9 @@ public class MainActivity extends FragmentActivity {
 		if (position == 0) {
 		    Intent intent = new Intent(MainActivity.this, ViewPagerActivity.class);
 		    MainActivity.this.startActivity(intent);
+		} else if (position == 1) {
+		    Intent intent = new Intent(MainActivity.this, TabHostFragmentActivity.class);
+		    MainActivity.this.startActivity(intent);
 		}
 	    }
 	});

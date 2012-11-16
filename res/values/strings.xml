@@ -11,4 +11,6 @@
         <item>Fragment with TabHost Fragments</item>
     </string-array>
 
+    <string name="title_activity_tab_host_fragment">TabHostFragmentActivity</string>
+
 </resources>

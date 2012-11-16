@@ -9,8 +9,8 @@
         android:id="@+id/textViewPosition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="20dp"
+        android:gravity="center"
         android:text="This is a test"
-        android:textSize="80sp" />
+        android:textSize="50sp" />
 
 </LinearLayout>

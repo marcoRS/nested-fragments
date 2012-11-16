@@ -13,6 +13,7 @@ import com.burnside.digital.nestedfragments.R;
 public class TextViewFragment extends Fragment {
 
     public static final String POSITION_KEY = "com.burnside.embeddedfragmenttest.POSITION";
+    public static final String TITLE_KEY = "com.burnside.embeddedfragmenttest.TITLE";
 
     public static TextViewFragment newInstance(Bundle args) {
 	TextViewFragment fragment = new TextViewFragment();
@@ -34,10 +35,16 @@ public class TextViewFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
 	super.onViewCreated(view, savedInstanceState);
 
-	final int position = getArguments().getInt(POSITION_KEY);
-
 	TextView textview = (TextView) view.findViewById(R.id.textViewPosition);
-	textview.setText(Integer.toString(position));
+	final int position;
+	if (getArguments() != null) {
+	    position = getArguments().getInt(POSITION_KEY);
+	    textview.setText(Integer.toString(position));
+	} else {
+	    position = 0;
+	    textview.setText("Child Fragment");
+	}
+
 	textview.setOnClickListener(new OnClickListener() {
 
 	    @Override

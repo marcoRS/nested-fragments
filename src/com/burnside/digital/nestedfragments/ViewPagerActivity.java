@@ -9,7 +9,7 @@ public class ViewPagerActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
-	setTitle("ViewPager Fragment");
+	setTitle("ViewPager Fragment Activity");
 
 	if (getSupportFragmentManager().findFragmentByTag(ParentFragment.TAG) == null) {
 	    getSupportFragmentManager().beginTransaction()
@@ -19,7 +19,6 @@ public class ViewPagerActivity extends FragmentActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-	// Inflate the menu; this adds items to the action bar if it is present.
 	getMenuInflater().inflate(R.menu.activity_view_pager, menu);
 	return true;
     }

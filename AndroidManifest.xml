@@ -26,6 +26,10 @@
             android:name="com.burnside.digital.nestedfragments.ViewPagerActivity"
             android:label="@string/title_activity_view_pager" >
         </activity>
+        <activity
+            android:name="com.burnside.digital.nestedfragments.TabHostFragmentActivity"
+            android:label="@string/title_activity_tab_host_fragment" >
+        </activity>
     </application>
 
 </manifest>

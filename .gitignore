@@ -32,3 +32,17 @@ target/
 
 # Checkstyle
 .checkstyle
+
+# Android Lint
+lint.xml
+
+# IntelliJ
+.idea
+*.iml
+*.ipr
+*.iws
+classes
+gen-external-apklibs
+out
+
+*.jar.properties

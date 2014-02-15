@@ -2,34 +2,28 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.burnside.digital.nestedfragments"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="16" />
+        android:targetSdkVersion="19" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name="com.burnside.digital.nestedfragments.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.burnside.digital.nestedfragments.ViewPagerActivity"
-            android:label="@string/title_activity_view_pager" >
-        </activity>
-        <activity
-            android:name="com.burnside.digital.nestedfragments.TabHostFragmentActivity"
-            android:label="@string/title_activity_tab_host_fragment" >
-        </activity>
+        <activity android:name=".ViewPagerFragmentActivity" />
+        <activity android:name="com.burnside.digital.nestedfragments.TabHostFragmentActivity" />
     </application>
 
 </manifest>

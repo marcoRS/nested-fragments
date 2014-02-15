@@ -2,15 +2,14 @@
 <resources>
 
     <string name="app_name">Nested Fragments</string>
-    <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
-    <string name="title_activity_view_pager">ViewPagerActivity</string>
+    <string name="activity_viewpager_title">ViewPager Fragment</string>
 
     <string-array name="nesting_types">
         <item>Fragment with ViewPager Fragments</item>
         <item>Fragment with TabHost Fragments</item>
     </string-array>
 
-    <string name="title_activity_tab_host_fragment">TabHostFragmentActivity</string>
+    <string name="activity_tabhost_title">Tabhost Fragment</string>
 
 </resources>

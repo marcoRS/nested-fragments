@@ -3,45 +3,37 @@ package com.burnside.digital.nestedfragments;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.burnside.digital.nestedfragments.R;
+public class MainActivity extends FragmentActivity implements OnItemClickListener {
 
-public class MainActivity extends FragmentActivity {
+    public static final int VIEW_PAGER_ACTIVITY = 0;
+    public static final int TAB_HOST_ACTIVITY = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-	super.onCreate(savedInstanceState);
-	setContentView(R.layout.activity_main);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-	ListView listView = (ListView) findViewById(R.id.mainListView);
-	ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.nesting_types,
-		android.R.layout.simple_expandable_list_item_1);
-	listView.setAdapter(adapter);
-
-	listView.setOnItemClickListener(new OnItemClickListener() {
-	    @Override
-	    public void onItemClick(AdapterView<?> adapterView, View arg1, int position, long arg3) {
-		if (position == 0) {
-		    Intent intent = new Intent(MainActivity.this, ViewPagerActivity.class);
-		    MainActivity.this.startActivity(intent);
-		} else if (position == 1) {
-		    Intent intent = new Intent(MainActivity.this, TabHostFragmentActivity.class);
-		    MainActivity.this.startActivity(intent);
-		}
-	    }
-	});
+        ListView listView = (ListView) findViewById(R.id.mainListView);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.nesting_types, R.layout.row_nested_type_label);
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(this);
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-	getMenuInflater().inflate(R.menu.activity_main, menu);
-	return true;
+    public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
+        switch (position) {
+            case VIEW_PAGER_ACTIVITY:
+                startActivity(new Intent(MainActivity.this, ViewPagerFragmentActivity.class));
+                break;
+            case TAB_HOST_ACTIVITY:
+                startActivity(new Intent(MainActivity.this, TabHostFragmentActivity.class));
+                break;
+        }
     }
-
 }

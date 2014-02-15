@@ -3,33 +3,31 @@ package com.burnside.digital.nestedfragments;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
-import android.view.Menu;
+import com.burnside.digital.nestedfragments.fragment.ParentTabHostFragment;
+import com.burnside.digital.nestedfragments.fragment.ParentViewPagerFragment;
+import com.burnside.digital.nestedfragments.fragment.SingleChildFragment;
 
 public class TabHostFragmentActivity extends FragmentActivity {
 
-    private FragmentTabHost mTabHost;
+    private FragmentTabHost tabHost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-	super.onCreate(savedInstanceState);
-	setTitle("TabHost Fragment Activity");
-	mTabHost = new FragmentTabHost(this);
-	setContentView(mTabHost);
+        super.onCreate(savedInstanceState);
+        setTitle(R.string.activity_tabhost_title);
 
-	mTabHost.setup(this, getSupportFragmentManager(), R.layout.activity_main);
-	mTabHost.addTab(mTabHost.newTabSpec("ParentViewPagerFragment").setIndicator("View Pager"),
-		ParentFragment.class, null);
-	mTabHost.addTab(mTabHost.newTabSpec("SingleFragment").setIndicator("Single Fragment"),
-		TextViewFragment.class, null);
+        tabHost = new FragmentTabHost(this);
+        setContentView(tabHost);
 
-	mTabHost.addTab(mTabHost.newTabSpec("EmbeddedTabHost").setIndicator("Embedded TabHost"),
-		TabHostParentFragment.class, null);
-    }
+        tabHost.setup(this, getSupportFragmentManager(), R.layout.activity_main);
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-	getMenuInflater().inflate(R.menu.activity_tab_host_fragment, menu);
-	return true;
+        tabHost.addTab(tabHost.newTabSpec("ParentViewPagerFragment").setIndicator("View Pager"),
+                ParentViewPagerFragment.class, null);
+        tabHost.addTab(tabHost.newTabSpec("SingleFragment").setIndicator("Single Fragment"),
+                SingleChildFragment.class, null);
+
+        tabHost.addTab(tabHost.newTabSpec("EmbeddedTabHost").setIndicator("Embedded TabHost"),
+                ParentTabHostFragment.class, null);
     }
 
 }

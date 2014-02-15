@@ -3,13 +3,17 @@
 
     <string name="app_name">Nested Fragments</string>
     <string name="menu_settings">Settings</string>
-    <string name="activity_viewpager_title">ViewPager Fragment</string>
+    <string name="viewpager_title">Fragment with FragmentPagerAdapter</string>
+    <string name="activity_tabhost_title">Activity with FragmentTabHost</string>
+    <string name="activity_title_tabhost_layout">FragmentTabHost In Xml</string>
+    <string name="activity_title_tabhost_as_ui">FragmentTabHost as Ui</string>
+    <string name="tabhost_layout_description">This example has the FragmentTabHost in xml.</string>
 
     <string-array name="nesting_types">
-        <item>Fragment with ViewPager Fragments</item>
-        <item>Fragment with TabHost Fragments</item>
+        <item>Fragment with FragmentPagerAdapter </item>
+        <item>Fragment with FragmentTabHost in Xml Layout</item>
+        <item>Fragment with FragmentTabHost as Ui</item>
+        <item>Activity with FragmentTabHost</item>
     </string-array>
-
-    <string name="activity_tabhost_title">Tabhost Fragment</string>
 
 </resources>

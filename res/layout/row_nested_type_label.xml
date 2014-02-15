@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:textAppearance="?android:textAppearanceMedium"
     android:padding="8dp"
-    android:fontFamily="sans-serif-light"
+    android:fontFamily="sans-serif-condensed"
     android:layout_height="match_parent">
 
 </TextView>

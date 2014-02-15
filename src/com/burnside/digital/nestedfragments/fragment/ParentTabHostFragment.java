@@ -10,6 +10,8 @@ import com.burnside.digital.nestedfragments.R;
 
 public class ParentTabHostFragment extends Fragment {
 
+    public static final String TAG = ParentTabHostFragment.class.getName();
+
     private FragmentTabHost fragmentTabHost;
 
     @Override

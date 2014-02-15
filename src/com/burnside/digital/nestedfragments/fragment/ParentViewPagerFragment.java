@@ -15,7 +15,7 @@ import com.burnside.digital.nestedfragments.R;
  */
 public class ParentViewPagerFragment extends Fragment {
 
-    public static final String TAG = ParentViewPagerFragment.class.getSimpleName();
+    public static final String TAG = ParentViewPagerFragment.class.getName();
 
     public static ParentViewPagerFragment newInstance() {
         return new ParentViewPagerFragment();

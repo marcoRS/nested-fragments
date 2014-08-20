@@ -3,8 +3,8 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.9.+'
-        classpath 'com.jakewharton.sdkmanager:gradle-plugin:0.9.+'
+        classpath 'com.android.tools.build:gradle:0.12.2'
+        classpath 'com.jakewharton.sdkmanager:gradle-plugin:0.12.0'
     }
 }
 
@@ -15,7 +15,7 @@ allprojects {
 }
 
 apply plugin: 'android-sdk-manager'
-apply plugin: 'android'
+apply plugin: 'com.android.application'
 
 android {
 
@@ -28,7 +28,7 @@ android {
     }
 
     compileSdkVersion 19
-    buildToolsVersion "19.0.3"
+    buildToolsVersion "19.1.0"
 
     lintOptions {
         abortOnError false
@@ -36,6 +36,7 @@ android {
 
     defaultConfig {
         minSdkVersion 14
+        //noinspection OldTargetApi
         targetSdkVersion 19
         versionCode 1
         versionName "1.0"
@@ -50,5 +51,6 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:19.0.+'
+    //noinspection GradleDependency
+    compile 'com.android.support:support-v4:19.1.0'
 }

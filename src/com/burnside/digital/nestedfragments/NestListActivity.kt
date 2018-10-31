@@ -2,18 +2,18 @@ package com.burnside.digital.nestedfragments
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.annotation.StringRes
-import androidx.fragment.app.FragmentActivity
 import android.view.View
 import android.widget.AdapterView
 import android.widget.AdapterView.OnItemClickListener
 import android.widget.ArrayAdapter
+import androidx.annotation.StringRes
+import androidx.appcompat.app.AppCompatActivity
 import com.burnside.digital.nestedfragments.fragment.ParentTabHostFragment
 import com.burnside.digital.nestedfragments.fragment.ParentViewPagerFragment
 import com.burnside.digital.nestedfragments.fragment.TabHostLayoutFragment
 import kotlinx.android.synthetic.main.activity_nest_list.*
 
-class NestListActivity : FragmentActivity(), OnItemClickListener {
+class NestListActivity : AppCompatActivity(), OnItemClickListener {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)

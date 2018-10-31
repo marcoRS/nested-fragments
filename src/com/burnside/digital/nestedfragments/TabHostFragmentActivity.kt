@@ -1,12 +1,12 @@
 package com.burnside.digital.nestedfragments
 
 import android.os.Bundle
-import androidx.fragment.app.FragmentActivity
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentTabHost
 import com.burnside.digital.nestedfragments.fragment.ParentViewPagerFragment
 import com.burnside.digital.nestedfragments.fragment.SingleChildFragment
 
-class TabHostFragmentActivity : FragmentActivity() {
+class TabHostFragmentActivity : AppCompatActivity() {
 
   override fun onCreate(state: Bundle?) {
     super.onCreate(state)

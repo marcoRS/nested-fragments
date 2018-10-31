@@ -1,6 +1,8 @@
 package com.burnside.digital.nestedfragments
 
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
@@ -18,6 +20,10 @@ class NestListActivity : AppCompatActivity(), OnItemClickListener {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_nest_list)
+
+    supportActionBar?.apply {
+      setBackgroundDrawable(ColorDrawable(Color.rgb(0, 53, 47)))
+    }
 
     val listAdapter = ArrayAdapter.createFromResource(this, R.array.nesting_types, R.layout.row_nested_type_label)
 

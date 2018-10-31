@@ -1,5 +1,7 @@
 package com.burnside.digital.nestedfragments
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentTabHost
@@ -10,7 +12,11 @@ class TabHostFragmentActivity : AppCompatActivity() {
 
   override fun onCreate(state: Bundle?) {
     super.onCreate(state)
-    setTitle(R.string.activity_tabhost_title)
+
+    supportActionBar?.apply {
+      setTitle(R.string.activity_tabhost_title)
+      setBackgroundDrawable(ColorDrawable(Color.rgb(13, 79, 72)))
+    }
 
     val tabs = FragmentTabHost(this)
     tabs.apply {

@@ -11,7 +11,7 @@
         <androidx.viewpager.widget.PagerTabStrip
             android:id="@+id/pagerTabStrip"
             android:layout_width="fill_parent"
-            android:layout_height="30dp"
+            android:layout_height="50dp"
             android:layout_gravity="top" >
         </androidx.viewpager.widget.PagerTabStrip>
     </androidx.viewpager.widget.ViewPager>

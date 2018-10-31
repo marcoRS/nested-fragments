@@ -1,5 +1,7 @@
 package com.burnside.digital.nestedfragments
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -8,6 +10,10 @@ class AttachFragmentActivity : AppCompatActivity() {
 
   override fun onCreate(state: Bundle?) {
     super.onCreate(state)
+
+    supportActionBar?.apply {
+      setBackgroundDrawable(ColorDrawable(Color.rgb(13, 79, 72)))
+    }
 
     intent.extras?.apply {
       setTitle(getInt(ACTIVITY_TITLE_KEY))

@@ -21,10 +21,6 @@ class NestListActivity : AppCompatActivity(), OnItemClickListener {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_nest_list)
 
-    supportActionBar?.apply {
-      setBackgroundDrawable(ColorDrawable(Color.rgb(0, 53, 47)))
-    }
-
     val listAdapter = ArrayAdapter.createFromResource(this, R.array.nesting_types, R.layout.row_nested_type_label)
 
     mainListView.apply {

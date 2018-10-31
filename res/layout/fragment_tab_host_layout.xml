@@ -15,7 +15,7 @@
         android:textAppearance="?android:textAppearanceSmall"
         android:textStyle="bold" />
 
-    <android.support.v4.app.FragmentTabHost
+    <androidx.fragment.app.FragmentTabHost
         android:id="@android:id/tabhost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -38,5 +38,5 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
         </LinearLayout>
-    </android.support.v4.app.FragmentTabHost>
+    </androidx.fragment.app.FragmentTabHost>
 </LinearLayout>

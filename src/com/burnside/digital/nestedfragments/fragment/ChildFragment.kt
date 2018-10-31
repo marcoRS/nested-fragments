@@ -1,7 +1,7 @@
 package com.burnside.digital.nestedfragments.fragment
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.OnClickListener
@@ -18,10 +18,10 @@ class ChildFragment : Fragment(), OnClickListener {
 
   private var position: Int = 0
 
-  override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, state: Bundle?): View? {
-    position = arguments.getInt(POSITION_KEY)
+  override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, state: Bundle?): View? {
+    position = arguments?.getInt(POSITION_KEY) ?: 0
 
-    val root = inflater?.inflate(R.layout.fragment_child, container, false)
+    val root = inflater.inflate(R.layout.fragment_child, container, false)
 
     (root?.findViewById(R.id.textViewPosition) as TextView).apply {
       text = String.format("%s", position)

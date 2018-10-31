@@ -1,8 +1,8 @@
 package com.burnside.digital.nestedfragments
 
 import android.os.Bundle
-import android.support.v4.app.FragmentActivity
-import android.support.v4.app.FragmentTabHost
+import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentTabHost
 import com.burnside.digital.nestedfragments.fragment.ParentViewPagerFragment
 import com.burnside.digital.nestedfragments.fragment.SingleChildFragment
 

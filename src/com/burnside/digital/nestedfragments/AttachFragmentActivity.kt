@@ -1,8 +1,8 @@
 package com.burnside.digital.nestedfragments
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentActivity
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 
 class AttachFragmentActivity : FragmentActivity() {
 
@@ -13,14 +13,13 @@ class AttachFragmentActivity : FragmentActivity() {
       setTitle(getInt(ACTIVITY_TITLE_KEY))
 
       val tag = getString(FRAGMENT_TAG_KEY)
-      val fm = supportFragmentManager
-
-      if (fm.findFragmentByTag(tag) == null) {
-        fm.beginTransaction()
-            .apply {
-              add(android.R.id.content, Fragment.instantiate(this@AttachFragmentActivity, tag), tag)
-              commit()
-            }
+      supportFragmentManager.apply {
+        if (findFragmentByTag(tag) == null) {
+          beginTransaction().apply {
+            add(android.R.id.content, Fragment.instantiate(this@AttachFragmentActivity, tag), tag)
+            commit()
+          }
+        }
       }
     }
   }

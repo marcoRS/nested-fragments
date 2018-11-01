@@ -3,10 +3,12 @@ package com.burnside.digital.nestedfragments
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentTabHost
 import com.burnside.digital.nestedfragments.fragment.ParentViewPagerFragment
 import com.burnside.digital.nestedfragments.fragment.SingleChildFragment
+
 
 class TabHostFragmentActivity : AppCompatActivity() {
 
@@ -16,6 +18,7 @@ class TabHostFragmentActivity : AppCompatActivity() {
     supportActionBar?.apply {
       setTitle(R.string.activity_tabhost_title)
       setBackgroundDrawable(ColorDrawable(Color.rgb(13, 79, 72)))
+      setDisplayHomeAsUpEnabled(true)
     }
 
     val tabs = FragmentTabHost(this)
@@ -27,4 +30,10 @@ class TabHostFragmentActivity : AppCompatActivity() {
 
     setContentView(tabs)
   }
+
+  override fun onOptionsItemSelected(item: MenuItem): Boolean =
+      when (item.itemId) {
+        android.R.id.home -> onBackPressed().let { true }
+        else -> super.onOptionsItemSelected(item)
+      }
 }

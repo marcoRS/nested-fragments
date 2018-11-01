@@ -3,6 +3,7 @@ package com.burnside.digital.nestedfragments
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 
@@ -13,6 +14,7 @@ class AttachFragmentActivity : AppCompatActivity() {
 
     supportActionBar?.apply {
       setBackgroundDrawable(ColorDrawable(Color.rgb(13, 79, 72)))
+      setDisplayHomeAsUpEnabled(true)
     }
 
     intent.extras?.apply {
@@ -29,6 +31,12 @@ class AttachFragmentActivity : AppCompatActivity() {
       }
     }
   }
+
+  override fun onOptionsItemSelected(item: MenuItem): Boolean =
+      when (item.itemId) {
+        android.R.id.home -> onBackPressed().let { true }
+        else -> super.onOptionsItemSelected(item)
+      }
 
   companion object {
     const val FRAGMENT_TAG_KEY = "FragmentTagKey"

@@ -13,6 +13,7 @@
         android:gravity="center"
         android:padding="15dp"
         android:text="I'm Single!"
+        android:textColor="@color/colorAccent"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="80sp"
         app:layout_constraintBottom_toBottomOf="parent"

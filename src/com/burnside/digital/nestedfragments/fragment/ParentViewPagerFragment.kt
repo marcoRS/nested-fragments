@@ -1,15 +1,15 @@
 package com.burnside.digital.nestedfragments.fragment
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-
 import com.burnside.digital.nestedfragments.R
+import com.google.android.material.tabs.TabLayout
 
 /**
  * This fragment hosts the viewpager that will use a FragmentPagerAdapter to display child fragments.
@@ -23,6 +23,9 @@ class ParentViewPagerFragment : Fragment() {
     // Important: Must use the child FragmentManager or you will see side effects.
     viewPager.adapter = MyAdapter(childFragmentManager)
 
+    val tabStrip = root.findViewById<TabLayout>(R.id.pagerTabStrip)
+    tabStrip.setupWithViewPager(viewPager)
+
     return root
   }
 
@@ -35,7 +38,7 @@ class ParentViewPagerFragment : Fragment() {
       return ChildFragment.newInstance(args)
     }
 
-    override fun getPageTitle(position: Int): CharSequence = "Child Fragment $position"
+    override fun getPageTitle(position: Int): CharSequence = "Tab $position"
   }
 
   companion object {

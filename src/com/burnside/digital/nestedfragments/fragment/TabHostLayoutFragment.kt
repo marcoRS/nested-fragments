@@ -13,12 +13,14 @@ class TabHostLayoutFragment : Fragment() {
   override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedState: Bundle?): View? {
     val root = inflater.inflate(R.layout.fragment_tab_host_layout, container, false)
 
-    root.findViewById<FragmentTabHost>(android.R.id.tabhost)
+    root.findViewById<FragmentTabHost>(R.id.fragmentTabHost)
         .apply {
           // Important: Must use child FragmentManager.
           setup(activity, childFragmentManager, android.R.id.tabcontent)
           addPositionTab(1)
           addPositionTab(2)
+          addPositionTab(3)
+          addPositionTab(4)
         }
 
     return root

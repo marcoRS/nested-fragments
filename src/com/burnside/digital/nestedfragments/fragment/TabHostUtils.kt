@@ -6,5 +6,5 @@ import androidx.fragment.app.FragmentTabHost
 fun FragmentTabHost.addPositionTab(position: Int) {
   val arg = Bundle().apply { putInt(ChildFragment.POSITION_KEY, position) }
   val klass = ChildFragment::class.java
-  this.addTab(this.newTabSpec("ChildTag$position").setIndicator("Child Fragment $position"), klass, arg)
+  this.addTab(this.newTabSpec("ChildTag$position").setIndicator("Child $position"), klass, arg)
 }

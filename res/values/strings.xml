@@ -7,7 +7,7 @@
     <string name="activity_tabhost_title">Activity with FragmentTabHost</string>
     <string name="activity_title_tabhost_layout">FragmentTabHost In Xml</string>
     <string name="activity_title_tabhost_as_ui">FragmentTabHost as Ui</string>
-    <string name="tabhost_layout_description">This example has the FragmentTabHost in xml.</string>
+    <string name="tabhost_layout_description">The FragmentTabHost is in Xml</string>
 
     <string-array name="nesting_types">
         <item>Fragment with FragmentPagerAdapter </item>

@@ -1,4 +1,4 @@
-package com.burnside.digital.nestedfragments
+package com.droidtitan.nested
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable

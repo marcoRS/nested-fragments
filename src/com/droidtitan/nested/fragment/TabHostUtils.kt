@@ -1,4 +1,4 @@
-package com.burnside.digital.nestedfragments.fragment
+package com.droidtitan.nested.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.FragmentTabHost

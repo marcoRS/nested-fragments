@@ -1,4 +1,4 @@
-package com.burnside.digital.nestedfragments.fragment
+package com.droidtitan.nested.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTabHost
-import com.burnside.digital.nestedfragments.R
+import com.droidtitan.nested.R
 
 class TabHostLayoutFragment : Fragment() {
 

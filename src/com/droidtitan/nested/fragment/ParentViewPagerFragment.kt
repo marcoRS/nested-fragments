@@ -1,4 +1,4 @@
-package com.burnside.digital.nestedfragments.fragment
+package com.droidtitan.nested.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
-import com.burnside.digital.nestedfragments.R
+import com.droidtitan.nested.R
 import com.google.android.material.tabs.TabLayout
 
 /**

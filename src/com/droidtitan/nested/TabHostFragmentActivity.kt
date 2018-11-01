@@ -1,4 +1,4 @@
-package com.burnside.digital.nestedfragments
+package com.droidtitan.nested
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentTabHost
-import com.burnside.digital.nestedfragments.fragment.ParentViewPagerFragment
-import com.burnside.digital.nestedfragments.fragment.SingleChildFragment
+import com.droidtitan.nested.fragment.ParentViewPagerFragment
+import com.droidtitan.nested.fragment.SingleChildFragment
 
 
 class TabHostFragmentActivity : AppCompatActivity() {

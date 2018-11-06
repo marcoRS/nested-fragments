@@ -23,7 +23,7 @@ class TabHostFragmentActivity : AppCompatActivity() {
 
     val tabs = FragmentTabHost(this)
     tabs.apply {
-      setup(this@TabHostFragmentActivity, supportFragmentManager, R.layout.activity_nest_list)
+      setup(this@TabHostFragmentActivity, supportFragmentManager, R.layout.activity_main)
       addTab(tabs.newTabSpec("ParentViewPagerFragment").setIndicator("View Pager"), ParentViewPagerFragment::class.java, null)
       addTab(tabs.newTabSpec("SingleFragment").setIndicator("Single Fragment"), SingleChildFragment::class.java, null)
     }

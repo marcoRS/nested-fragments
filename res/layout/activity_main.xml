@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.droidtitan.nested.NestListActivity">
+    tools:context="com.droidtitan.nested.MainActivity">
 
     <ListView
         android:id="@+id/mainListView"

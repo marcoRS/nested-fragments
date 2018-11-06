@@ -11,19 +11,19 @@ import androidx.appcompat.app.AppCompatActivity
 import com.droidtitan.nested.fragment.ParentTabHostFragment
 import com.droidtitan.nested.fragment.ParentViewPagerFragment
 import com.droidtitan.nested.fragment.TabHostLayoutFragment
-import kotlinx.android.synthetic.main.activity_nest_list.*
+import kotlinx.android.synthetic.main.activity_main.*
 
-class NestListActivity : AppCompatActivity(), OnItemClickListener {
+class MainActivity : AppCompatActivity(), OnItemClickListener {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_nest_list)
+    setContentView(R.layout.activity_main)
 
-    val listAdapter = ArrayAdapter.createFromResource(this, R.array.nesting_types, R.layout.row_nested_type_label)
+    val listAdapter = ArrayAdapter.createFromResource(this, R.array.nesting_types, R.layout.row_nested_fragment_type)
 
     mainListView.apply {
       adapter = listAdapter
-      onItemClickListener = this@NestListActivity
+      onItemClickListener = this@MainActivity
     }
   }
 
